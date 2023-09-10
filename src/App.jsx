@@ -1,12 +1,16 @@
+import Layout from './layout/Layout';
 import './App.css';
+import Header from './components/Header';
+import HerSection from './components/HerSection';
 
 function App() {
 
   return (
     <>
-      <div className='text-center'>
-        <h1 className='text-red-500'>sad</h1>
-      </div>
+      <Header />
+      <Layout>
+        <HerSection />
+      </Layout>
     </>
   )
 }

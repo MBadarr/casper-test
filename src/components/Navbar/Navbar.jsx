@@ -3,6 +3,7 @@ import { useState } from "react";
 import { NavLinks } from "./NavLinks";
 import { Link } from 'react-router-dom';
 import cart from '../../assets/icons/cart.png';
+import menu from '../../assets/icons/menu.png';
 
 function Navbar() {
     const [open, setOpen] = useState(false);
@@ -13,7 +14,7 @@ function Navbar() {
         <header className="bg-white shadow-sm sticky top-0 z-10">
             <nav className="flex justify-start flex-col md:flex-row lg:flex-row md:justify-between lg:jusify-between px-6 py-2 mx auto">
                 <div className="h-0 md:h-1/4 lg:h-1/4">
-                    <img src={imgURL} alt="cart" />
+                    <img src={imgURL} alt="logo" />
                 </div>
                 <div className="flex justify-start mt-14 md:mt-0 lg:mt-0 flex-col md:flex-row lg:flex-row md:justify-between md:items-center lg:items-center lg:jusify-between gap-6 md:gap-8 lg-gap-8">
                     {NavLinks.map((link) => (

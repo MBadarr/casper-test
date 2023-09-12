@@ -45,21 +45,30 @@ function Navbar() {
         // </nav>
 
         <nav className="bg-white shadow-sm sticky top-0 z-10">
-            <div className="flex justify-center flex-col md:flex-row lg:flex-row md:justify-between lg:jusify-between px-6 py-2 mx-auto">
-                <div className="flex justify-center items-center">
-                    <img src={imgURL} alt="logo" />
-                </div>
+            <div className="md:flex md:justify-between px-6 py-2 mx-auto">
+                {isOpen ?
+                    <div className="flex justify-start items-start">
+                        <img src={imgURL} alt="logo" />
+                    </div>
+                    :
+                    <div className="flex justify-center items-center">
+                        <img src={imgURL} alt="logo" />
+                    </div>
+                }
+
                 {isOpen ?
                     <div className="absolute cursor-pointer top-4 right-6 md:hidden lg:hidden" onClick={toggleMenu}>
                         <img src={cross} alt="cross" />
                     </div>
                     :
-                    <div className="absolute cursor-pointer top-4 left-6 md:hidden lg:hidden" onClick={toggleMenu}>
-                        <img src={menu} alt="menu" />
-                    </div>
+                    <>
+                        <div className="absolute cursor-pointer top-4 left-6 md:hidden lg:hidden" onClick={toggleMenu}>
+                            <img src={menu} alt="menu" />
+                        </div>
+                    </>
                 }
 
-                <ul className="flex flex-col mt-6 gap-4 md:flex-row md:items-center md:mt-0 md:gap-4 lg:flex-row lg:items-center lg:mt-0 lg:gap-6">
+                <ul className={`flex flex-col shadow-sm md:shadow-none pl-6 py-2 mt-0 gap-3 md:flex-row md:items-center md:gap-6 absolute md:static bg-white left-0 w-full md:w-auto md:pl-0 ${isOpen ? 'top-[55px]' : 'top-[-490px]'}`}>
                     <NavMenu />
                 </ul>
 

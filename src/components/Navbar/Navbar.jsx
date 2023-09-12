@@ -45,7 +45,7 @@ function Navbar() {
         // </nav>
 
         <nav className="bg-white shadow-sm sticky top-0 z-10">
-            <div className="md:flex md:justify-between px-6 py-2 mx-auto">
+            <div className="md:flex md:justify-between px-6 py-2">
                 {isOpen ?
                     <div className="flex justify-start items-start">
                         <img src={imgURL} alt="logo" />
@@ -68,7 +68,7 @@ function Navbar() {
                     </>
                 }
 
-                <ul className={`flex flex-col shadow-sm md:shadow-none pl-6 py-2 mt-0 gap-2 md:flex-row md:items-center md:gap-6 absolute md:static bg-white left-0 w-full md:w-auto md:pl-0 ${isOpen ? 'top-[55px]' : 'top-[-490px]'}`}>
+                <ul className={`flex flex-col shadow-sm md:shadow-none md:w-90 pl-6 py-2 mt-0 gap-2 md:flex-row md:items-center md:gap-4 lg:gap-6 absolute md:static bg-white left-0 w-full md:w-auto md:pl-0 ${isOpen ? 'top-[55px]' : 'top-[-490px]'}`}>
                     <NavMenu />
                 </ul>
 

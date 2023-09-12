@@ -68,7 +68,7 @@ function Navbar() {
                     </>
                 }
 
-                <ul className={`flex flex-col shadow-sm md:shadow-none pl-6 py-2 mt-0 gap-3 md:flex-row md:items-center md:gap-6 absolute md:static bg-white left-0 w-full md:w-auto md:pl-0 ${isOpen ? 'top-[55px]' : 'top-[-490px]'}`}>
+                <ul className={`flex flex-col shadow-sm md:shadow-none pl-6 py-2 mt-0 gap-2 md:flex-row md:items-center md:gap-6 absolute md:static bg-white left-0 w-full md:w-auto md:pl-0 ${isOpen ? 'top-[55px]' : 'top-[-490px]'}`}>
                     <NavMenu />
                 </ul>
 

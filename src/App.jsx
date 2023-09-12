@@ -9,7 +9,7 @@ function App() {
     <>
       <Header />
       <Layout>
-        <HerSection />
+        {/* <HerSection /> */}
       </Layout>
     </>
   )

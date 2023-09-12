@@ -31,7 +31,7 @@ const NavMenu = () => {
                         </h1>
                         {link.submenu && (
                             <div>
-                                <div className="absolute top-20 hidden group-hover:md:block hover:md:block">
+                                <div className="absolute bg-slate-500 top-20 hidden group-hover:md:block hover:md:block">
                                     <div className="py-3">
                                         <div
                                             className="w-4 h-4 left-3 absolute 
@@ -107,7 +107,8 @@ const NavMenu = () => {
                 </div>
             ))}
         </>
-    );
+    )
 };
+
 
 export default NavMenu;

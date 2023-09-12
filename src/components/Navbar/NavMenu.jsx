@@ -9,10 +9,10 @@ const NavMenu = () => {
     return (
         <>
             {NavLinks.map((link) => (
-                <div>
+                <>
                     <div className="px-3 text-left md:cursor-pointer group">
                         <h1
-                            className="py-7 flex justify-between items-center md:pr-0 pr-5 group"
+                            className="py-7 md:flex-col flex justify-between items-center md:pr-0 pr-5 group"
                             onClick={() => {
                                 heading !== link.name ? setHeading(link.name) : setHeading("");
                                 setSubHeading("");
@@ -31,7 +31,7 @@ const NavMenu = () => {
                         </h1>
                         {link.submenu && (
                             <div>
-                                <div className="absolute bg-slate-500 top-20 hidden group-hover:md:block hover:md:block">
+                                <div className="absolute top-20 hidden group-hover:md:block hover:md:block">
                                     <div className="py-3">
                                         <div
                                             className="w-4 h-4 left-3 absolute 
@@ -104,11 +104,10 @@ const NavMenu = () => {
                             </div>
                         ))}
                     </div>
-                </div>
+                </>
             ))}
         </>
-    )
+    );
 };
-
 
 export default NavMenu;

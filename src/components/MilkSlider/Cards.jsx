@@ -15,6 +15,7 @@ function Cards() {
             </header>
             <div className="custom-scrollbar px-6 py-6 overflow-x-scroll">
                 <div className="flex flex-nowrap gap-4 min-w-max">
+
                     {CardsContent.map(item => (
                         <CardsData
                             key={item.id}

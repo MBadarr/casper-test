@@ -5,6 +5,7 @@
 .custom-scrollbar {
   scrollbar-width: thin; /* Firefox support */
   scrollbar-color: pink hotpink; /* Firefox support */
+  scroll-behavior: smooth;
 
   &::-webkit-scrollbar {
     height: 8px;

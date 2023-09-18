@@ -5,7 +5,7 @@ function CardsData(peops) {
 
     return (
         <>
-            <div className="max-w-md rounded-xl shadow-lg">
+            <div className="max-w-xs md:max-w-sm lg:max-w-md rounded-xl shadow-lg">
                 <img className="w-full" src={imgURL} alt="Sunset in the mountains" />
                 <div className="px-6 py-4">
                     <div className="font-bold text-xl mb-2 text-center">{title}</div>

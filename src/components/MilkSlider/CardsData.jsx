@@ -8,8 +8,8 @@ function CardsData(peops) {
             <div className="max-w-md rounded-xl overflow-hidden shadow-lg">
                 <img className="w-full" src={imgURL} alt="Sunset in the mountains" />
                 <div className="px-6 py-4">
-                    <div className="font-bold text-xl mb-2">{title}</div>
-                    <p className="text-gray-700 text-base">
+                    <div className="font-bold text-xl mb-2 text-center">{title}</div>
+                    <p className="text-lg leading-6 text-center">
                         {description}
                     </p>
                 </div>

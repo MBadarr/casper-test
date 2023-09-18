@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-scrollbar {
+  scrollbar-width: thin; /* Firefox support */
+  scrollbar-color: pink hotpink; /* Firefox support */
+
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #e94c8c; /* Change to your desired color */
+    border-radius: 30px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #fad4e4;
+    border-radius: 30px;
+    margin: 10px 60px 0;
+    scrollbar-width: 5px; /* Chrome support */
+  }
+}

@@ -13,16 +13,17 @@ function Cards() {
                 <h2 className="uppercase font-bold text-4xl">SHOP OUR BESTSELLERS</h2>
                 <p className="text-base leading-10">Iconic layer cakes with unfrosted sides, gooey pie, and fudgy Cake Truffles.</p>
             </header>
-            <div className="px-6 py-6 w-full flex justify-normal gap-4">
-                {CardsContent.map(item => (
-                    <CardsData
-                        key={item.id}
-                        imgURL={item.imgSrc}
-                        title={item.title}
-                        description={item.description}
-                    />
-                ))}
-
+            <div className="custom-scrollbar px-6 py-6 overflow-x-scroll">
+                <div className="flex flex-nowrap gap-4 min-w-max">
+                    {CardsContent.map(item => (
+                        <CardsData
+                            key={item.id}
+                            imgURL={item.imgSrc}
+                            title={item.title}
+                            description={item.description}
+                        />
+                    ))}
+                </div>
             </div>
         </>
     )

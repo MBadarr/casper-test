@@ -18,10 +18,8 @@ function Cards() {
         const container = scrollContainerRef.current;
         setScrollPosition(container.scrollLeft);
 
-        // Check if left chevron should be shown
         setShowLeftChevron(container.scrollLeft > 0);
 
-        // Check if right chevron should be shown
         setShowRightChevron(container.scrollLeft < container.scrollWidth - container.clientWidth);
     };
 
@@ -46,15 +44,13 @@ function Cards() {
     };
 
     useEffect(() => {
-        // Add scroll event listener when the component mounts
         const container = scrollContainerRef.current;
         container.addEventListener('scroll', handleScroll);
 
-        // Remove the scroll event listener when the component unmounts
         return () => {
             container.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    });
 
 
     return (
@@ -67,14 +63,14 @@ function Cards() {
                 <div className="group">
                     {/* Left Chevron */}
                     {showLeftChevron && (
-                        <div className="fixed top-80 left-0 z-50 flex items-center justify-center bg-chevron_bg h-20 w-20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" onClick={scrollLeft}>
+                        <div className="fixed top-80 left-0 z-50 flex items-center justify-center bg-chevron_bg h-20 w-20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 cursor-pointer" onClick={scrollLeft}>
                             <img src={LeftChevron} alt="left chevron" className="h-6 w-6" />
                         </div>
                     )}
 
                     {/* Right Chevron */}
                     {showRightChevron && (
-                        <div className="fixed top-80 right-0 z-50 flex items-center justify-center bg-chevron_bg h-20 w-20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" onClick={scrollRight}>
+                        <div className="fixed top-80 right-0 z-50 flex items-center justify-center bg-chevron_bg h-20 w-20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 cursor-pointer" onClick={scrollRight}>
                             <img src={RightChevron} alt="right chevron" className="h-6 w-6" />
                         </div>
                     )}

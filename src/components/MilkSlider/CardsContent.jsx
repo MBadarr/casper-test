@@ -10,7 +10,7 @@ const CardsContent = [
         "title": "THE BIRTHDAY CLASSIC",
         "description": "Tried and true b’day cake flavor fanatics, take note.",
         "imgSrc": Cake,
-        "imgHover": Pastry,
+        "imgHover": "https://milkbarstore.com/cdn/shop/files/BirthdayCake_2023_0011.jpg?format=pjpg&v=1689691374&width=600",
     },
     {
         "id": 2,

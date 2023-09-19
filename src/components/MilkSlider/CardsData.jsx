@@ -18,7 +18,6 @@ function CardsData(peops) {
                     <p className="text-lg leading-6 text-center">
                         {description}
                     </p>
-                    {/* Chevron svg */}
 
                     <div className="absolute left-48 top-6 md:absolute md:left-64 md:top-6 lg:absolute lg:left-80">
                         <svg className="rotate-90" width="135" height="90" viewBox="0 0 136 135" fill="none" xmlns="http://www.w3.org/2000/svg">

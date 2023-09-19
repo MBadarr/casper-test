@@ -23,11 +23,18 @@ function Cards() {
         setShowRightChevron(container.scrollLeft < container.scrollWidth - container.clientWidth);
     };
 
+    const scrollStep = 100;
+
     const scrollLeft = () => {
-        const newScrollPosition = scrollPosition - 200;
+        const newScrollPosition = scrollPosition - scrollStep;
         if (newScrollPosition >= 0) {
             scrollContainerRef.current.scrollTo({
                 left: newScrollPosition,
+                behavior: 'smooth',
+            });
+        } else {
+            scrollContainerRef.current.scrollTo({
+                left: 0,
                 behavior: 'smooth',
             });
         }
@@ -63,14 +70,14 @@ function Cards() {
                 <div className="group">
                     {/* Left Chevron */}
                     {showLeftChevron && (
-                        <div className="fixed top-80 left-0 z-50 flex items-center justify-center bg-chevron_bg h-20 w-20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 cursor-pointer" onClick={scrollLeft}>
+                        <div className="fixed top-80 left-0 z-50 flex items-center justify-center bg-chevron_bg h-14 w-14 md:h-20 md:w-20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 cursor-pointer" onClick={scrollLeft}>
                             <img src={LeftChevron} alt="left chevron" className="h-6 w-6" />
                         </div>
                     )}
 
                     {/* Right Chevron */}
                     {showRightChevron && (
-                        <div className="fixed top-80 right-0 z-50 flex items-center justify-center bg-chevron_bg h-20 w-20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 cursor-pointer" onClick={scrollRight}>
+                        <div className="fixed top-80 right-0 z-50 flex items-center justify-center bg-chevron_bg h-14 w-14 md:h-20 md:w-20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 cursor-pointer" onClick={scrollRight}>
                             <img src={RightChevron} alt="right chevron" className="h-6 w-6" />
                         </div>
                     )}

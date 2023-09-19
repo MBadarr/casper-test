@@ -9,7 +9,7 @@ function Cards() {
 
     return (
         <>
-            <header className="mt-8 text-center">
+            <header className="mt-7 text-center">
                 <h2 className="uppercase font-bold text-4xl">SHOP OUR BESTSELLERS</h2>
                 <p className="text-base leading-10">Iconic layer cakes with unfrosted sides, gooey pie, and fudgy Cake Truffles.</p>
             </header>

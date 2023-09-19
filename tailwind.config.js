@@ -9,6 +9,7 @@ export default {
       colors: {
         header: '#1e306e',
         header_text: '#ffffff',
+        chevron_bg: 'rgba(247,38,138,.8)',
       }
     },
   },

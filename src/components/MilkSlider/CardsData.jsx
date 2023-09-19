@@ -1,11 +1,18 @@
+import { useState } from "react";
+
 function CardsData(peops) {
 
-    const { imgURL, title, description } = peops;
+    const { imgURL, imgHover, title, description } = peops;
+
+    const [isHovered, setIsHovered] = useState(false);
 
     return (
         <>
-            <div className="max-w-xs relative md:max-w-sm lg:max-w-md rounded-xl shadow-lg">
-                <img className="w-full" src={imgURL} alt="Sunset in the mountains" />
+            <div className="max-w-xs relative md:max-w-sm lg:max-w-md rounded-xl shadow-lg"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+            >
+                <img className="w-full" src={isHovered ? imgHover : imgURL} alt={title} />
                 <div className="px-6 py-4">
                     <div className="font-bold text-xl mb-2 text-center">{title}</div>
                     <p className="text-lg leading-6 text-center">

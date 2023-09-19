@@ -87,6 +87,7 @@ function Cards() {
                             <CardsData
                                 key={item.id}
                                 imgURL={item.imgSrc}
+                                imgHover={item.imgHover}
                                 title={item.title}
                                 description={item.description}
                             />
